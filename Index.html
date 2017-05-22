@@ -1,0 +1,184 @@
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <form>
+        <div class="style">
+
+            <div class="fromdiv">
+                <div class="child_form">
+                    <label>Title</label>
+                    <select id="title" onchange="titleChange()">
+                        <option value="">Select</option>
+		<option value="Mr">Mr</option>
+		<option value="Mrs">Mrs</option>
+		<option value="Miss">Miss</option>
+		</select>
+                </div>
+                <div class="child_form">
+                    <label for="FirstName">FirstName</label>
+                    <input id="firstName" name="firstName" type="text" onchange="firstNameChange()">
+                </div>
+                <div class="child_form">
+                    <label for="LastName">LastName</label>
+                    <input id="lastName" name="lastName" type="text" onchange="lastNameChange()">
+                </div>
+            </div>
+
+            <div class="fromdiv">
+                <label>Email</label>
+                <input id="email" name="email" type="textbox" onchange="emailchange()">
+            </div>
+
+            <div class="fromdiv">
+                <label>Phone no(UK)</label>
+                <input id="phoneno" type="textbox" id="phoneNumber" onchange="phonenochange()">
+            </div>
+
+            <div class="fromdiv">
+                <label>Post Code(UK)</label>
+                <input id="postcode" type="textbox" id="postCode" onchange="postcodechange()">
+            </div>
+        </div>
+        <div>
+            <input type="button" value="Submit" onclick="submitForm()">
+        </div>
+
+    </form>
+
+
+    <script type="text/javascript">
+        function submitForm() {
+            var title = document.getElementById("title");
+            var firstName = document.getElementById("firstName");
+            var lastName = document.getElementById("lastName");
+            var email = document.getElementById("email");
+            var phoneNumber = document.getElementById("phoneNumber");
+            var postCode = document.getElementById("postCode");
+
+            if (title.value == "") {
+                title.style.backgroundColor = "red"
+
+            }
+            if (firstName.value == "") {
+                firstName.style.backgroundColor = "red"
+
+            }
+            if (lastName.value == "") {
+                lastName.style.backgroundColor = "red"
+
+            }
+            if (email.value == "") {
+                email.style.backgroundColor = "red"
+
+            }
+            if (phoneno.value == "") {
+                phoneno.style.backgroundColor = "red"
+
+            }
+
+
+
+
+            if (postcode.value == "") {
+                postcode.style.backgroundColor = "red"
+
+            }
+
+        }
+
+
+
+
+
+
+        function titleChange() {
+            var title = document.getElementById("title");
+            if (title.value != "") {
+                title.style.backgroundColor = "";
+
+            } else {
+                title.style.backgroundColor = "red";
+            }
+
+
+
+        }
+
+        function firstNameChange() {
+
+            var firstName = document.getElementById("firstName");
+            firstName.style.backgroundColor = "";
+
+            if (firstName.value === "") {
+
+                firstName.style.backgroundColor = "red";
+            }
+
+
+
+        }
+
+        function lastNameChange() {
+
+            var lastName = document.getElementById("lastName");
+            lastName.style.backgroundColor = "";
+
+            if (lastName.value === "") {
+
+                lastName.style.backgroundColor = "red";
+            }
+        }
+
+
+        function emailchange() {
+
+            var email = document.getElementById("email");
+            email.style.backgroundColor = "";
+
+            if (email.value === "") {
+
+                email.style.backgroundColor = "red";
+            }
+        }
+
+
+
+
+        function phonenochange() {
+
+            var phoneno = document.getElementById("phoneno");
+            phoneno.style.backgroundColor = "";
+
+            if (phoneno.value === "") {
+
+                phoneno.style.backgroundColor = "red";
+            }
+        }
+
+
+
+
+        function postcodechange() {
+
+            var postcode = document.getElementById("postcode");
+            postcode.style.backgroundColor = "";
+
+            if (postcode.value === "") {
+
+                postcode.style.backgroundColor = "red";
+            }
+
+
+        }
+    </script>
+
+
+</body>
+
+
+
+</html>
